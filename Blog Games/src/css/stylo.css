@@ -1,0 +1,173 @@
+ /* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(203, 218, 218);
+  }
+    
+
+  /* Estilo do título da página */
+  header {
+    border-bottom: 5px solid rgb(205, 82, 216); /* define a cor inicial da borda */
+    border-image: linear-gradient(90deg, rgb(205, 82, 216), rgb(82, 216, 205)); /* define o gradiente da borda */
+    border-image-slice: 1; /* define a fatia da borda */
+    animation: gradient 5s infinite; /* define a animação da borda */
+    background-color: #333; /* Cor de fundo cinza escuro */
+    height: 125px; /* Altura fixa de 150 pixels */
+    width: 100%; /* Largura igual à da tela */
+    margin: 0; /* Sem margem externa */
+    padding: 20px; /* Preenchimento interno de 10 pixels */
+  }
+
+  @keyframes gradient {
+    0% {
+      border-image-source: linear-gradient(90deg, rgb(205, 82, 216), rgb(82, 216, 205)); /* define a cor inicial do gradiente */
+    }
+    50% {
+      border-image-source: linear-gradient(90deg, rgb(82, 216, 205), rgb(205, 82, 216)); /* define a cor intermediária do gradiente */
+    }
+    100% {
+      border-image-source: linear-gradient(90deg, rgb(205, 82, 216), rgb(82, 216, 205)); /* define a cor final do gradiente */
+    }
+  }
+  
+  header h1 {
+    color: #fff; /* Cor branca */
+    font-size: 36px; /* Tamanho da fonte de 36 pixels */
+    font-family: Arial, sans-serif; /* Fonte Arial ou sem serifa */
+    text-align: center; /* Alinhamento centralizado */
+    line-height: 80px; /* Altura da linha igual à altura do cabeçalho menos o preenchimento */
+  }
+  
+
+  /* Estilo do container que contém os cards */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+  }
+
+  /* Estilo de cada card */
+.card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* define a duração e o tipo de animação */
+  }
+  .card:hover {
+    transform: scale(1.1); /* aumenta o tamanho do elemento em 20% */
+    
+  }
+
+  /* Estilo da imagem do jogo no card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Estilo do conteúdo do card */
+.card-content {
+    padding: 15px;
+    background-color: rgb(122, 119, 119);
+  }
+
+  /* Estilo do título do jogo no card */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffdfd;
+    margin-bottom: 10px;
+  }
+
+  /* Estilo da descrição do jogo no card */
+.card-description {
+  max-height: 80px;
+	overflow-y: scroll;
+	font-size: 14px;
+	padding-right: 10px;
+  text-align: justify;
+  color: #fff;
+  }
+
+  /* Estilo do botão de download no card */
+.card-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f0e5a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333; /* Cor de fundo cinza escuro */
+    height: 150px; /* Altura fixa de 150 pixels */
+    width: 100%; /* Largura igual à da tela */
+    margin: 0; /* Sem margem externa */
+    padding: 10; /* Preenchimento interno de 10 pixels */
+    border-top: 5px solid #f90; /* Borda superior laranja de 5 pixels */
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5); /* Sombra preta dentro do rodapé */
+  }
+  
+  footer div {
+    float: left; /* Flutuação à esquerda */
+    height: 130px; /* Altura igual à altura do rodapé menos o preenchimento */
+    width: auto; /* Largura automática de acordo com o conteúdo */
+  }
+  
+  footer div img {
+    height: 100%; /* Altura igual à altura do elemento pai */
+    width: auto; /* Largura automática de acordo com a proporção da imagem */
+  }
+  
+  footer p {
+    color: #fff; /* Cor branca */
+    font-size: 18px; /* Tamanho da fonte de 18 pixels */
+    font-family: Arial, sans-serif; /* Fonte Arial ou sem serifa */
+    text-align: center; /* Alinhamento centralizado */
+    line-height: 130px; /* Altura da linha igual à altura do elemento pai */
+  }
+  
+  footer ul {
+    float: right; /* Flutuação à direita */
+    height: 130px; /* Altura igual à altura do rodapé menos o preenchimento */
+    width: auto; /* Largura automática de acordo com o conteúdo */
+    list-style: none; /* Sem marcadores */
+  }
+  
+  footer ul li {
+    display: inline-block; /* Exibição em bloco na linha */
+    height: 100%; /* Altura igual à altura do elemento pai */
+    width: auto; /* Largura automática de acordo com o conteúdo */
+  }
+  
+  footer ul li a {
+    display: block; /* Exibição em bloco */
+    height: 100%; /* Altura igual à altura do elemento pai */
+    width: auto; /* Largura automática de acordo com o conteúdo */
+  }
+  
+  footer ul li a img {
+    height: 80%; /* Altura de 80% da altura do elemento pai */
+    width: auto; /* Largura automática de acordo com a proporção da imagem */
+    margin: 10%; /* Margem de 10% da altura do elemento pai */
+  }
+  
+  footer a {
+    color: #fff; /* Cor branca */
+    font-size: 18px; /* Tamanho da fonte de 18 pixels */
+    font-family: Arial, sans-serif; /* Fonte Arial ou sem serifa */
+    text-align: center; /* Alinhamento centralizado */
+    line-height: 20px; /* Altura da linha de 20 pixels */
+    text-decoration: none; /* Sem sublinhado */
+  }
+  
